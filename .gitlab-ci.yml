@@ -1,0 +1,13 @@
+image: boileaum/latex:fr
+
+build:
+  tags:
+    - docker
+    - pages
+  script:
+    - pip install --no-cache-dir --upgrade pip
+    - pip install --no-cache-dir -r requirements.txt
+    - ./quittances.py
+  artifacts:
+    paths:
+      - "quittances/"

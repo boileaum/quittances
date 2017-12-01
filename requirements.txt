@@ -1,0 +1,4 @@
+jinja2
+latex
+python-dateutil
+pyyaml

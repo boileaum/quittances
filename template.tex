@@ -1,0 +1,92 @@
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+
+% LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, left=40mm, right=40mm, top=30mm, bottom=17mm}
+
+% No page numbers
+\pagenumbering{gobble}
+
+% Left align
+\usepackage[document]{ragged2e}
+
+% Set paragraph break
+\setlength{\parskip}{1em}
+
+% PDF SETUP
+\usepackage[bookmarks, colorlinks, breaklinks]{hyperref}
+\hypersetup
+{
+  pdfauthor={\VAR{landlord}},
+  pdfsubject={Quittance \VAR{doc_date}},
+  pdftitle={Quittance de loyer du mois \VAR{month} \VAR{year}},
+  linkcolor=black,
+  citecolor=black,
+  filecolor=black,
+  urlcolor=black
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+
+% DOCUMENT
+\begin{document}
+\small
+\textbf{\VAR{landlord}} \textbullet{} \VAR{landlord_street} \textbullet{} \VAR{landlord_city}
+
+\vspace{3em}
+
+\normalsize \sffamily
+
+\VAR{tenant} \\
+\VAR{address_street} \\
+\VAR{address_city} 
+
+\vspace{3em}
+
+\begin{flushright}
+\VAR{sign_city}, le \VAR{sign_date}
+\end{flushright}
+
+\vspace{1em}
+
+\section*{\centering Quittance du mois \VAR{month} \VAR{year}}
+
+\vspace{3em}
+
+\textbf{Adresse du logement :} \VAR{address_street}, \VAR{address_city}
+
+\vspace{2em}
+
+Je soussigné \VAR{landlord}, propriétaire du logement désigné ci-dessus,
+déclare avoir reçu \VAR{dtenant} la somme de \VAR{total_amount_letters}  (\VAR{total_amount} euros),
+au titre du paiement du loyer et des charges pour la période de location du
+\VAR{start} au \VAR{end} et \VAR{pronoun} en donne quittance,
+sous réserve de tous mes droits\footnote{Cette quittance annule tous les reçus qui auraient pu être établis
+précédemment en cas de paiement partiel du montant du présent terme.
+Elle est à conserver pendant trois ans par le locataire
+(article 7-1 de la loi \no 89-462 du 6 juillet 1989).}.
+
+\vspace{2em}
+
+\textbf{Détail du règlement :}
+\begin{itemize}
+\item Loyer : \VAR{rent} euros
+\item Provision pour charges : \VAR{charges} euros
+\item \textbf{Total du loyer : \VAR{total_amount} euros} 
+\item Date du paiement : le \VAR{pay_date}
+\end{itemize}
+
+\vspace{3em}
+
+\begin{flushright}
+\VAR{landlord}
+\end{flushright}
+
+
+\end{document}
