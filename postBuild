@@ -1,8 +1,9 @@
 #!/bin/bash
-sed -i 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen
-locale-gen fr_FR.UTF-8
+#sed -i 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen
+#locale-gen fr_FR.UTF-8
 LANG fr_FR.UTF-8
 LANGUAGE fr_FR
 LC_ALL fr_FR.UTF-8
-dpkg-reconfigure -f noninteractive locales
+date
+#dpkg-reconfigure -f noninteractive locales
 
