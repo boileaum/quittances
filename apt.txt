@@ -1,0 +1,4 @@
+latexmk
+texlive-latex-extra
+texlive-lang-french
+locales
