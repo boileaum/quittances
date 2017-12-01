@@ -1,6 +1,7 @@
 #!/bin/bash
 #sed -i 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen
 #locale-gen fr_FR.UTF-8
+locale -a
 export LANG=fr_FR.UTF-8
 export LANGUAGE=fr_FR
 export LC_ALL=fr_FR.UTF-8
